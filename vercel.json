@@ -1,9 +1,13 @@
 {
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/bin/server.js",
-            "use": "@vercel/node"
-        }
-    ]
+  "version": 2,
+  "builds": [{
+    "src": "/bin/server.js",
+    "use": "@now/node-server"
+  }],
+  "routes": [{"handle": "filesystem"},
+    {
+      "src": "/.*",
+      "dest": "/bin/server.js"
+    }
+  ]
 }
