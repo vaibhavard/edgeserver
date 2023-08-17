@@ -2,7 +2,8 @@
     "rewrites": [
         {
             "source": "/(.*)",
-            "destination": "/bin/server.js"
+            "destination": "/bin/server.js",
+            "use": "@vercel/node"
         }
     ]
 }
